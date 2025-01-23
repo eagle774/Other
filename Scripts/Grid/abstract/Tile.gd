@@ -17,7 +17,9 @@ func add_entity(entity: GridEntity) -> void:
 	assert(_entity == null, 
 			"Trying to put an entity in tile {tile} failed because that tile is already occupied with entity {entity}"
 			.format({"tile": pos, "entity": _entity}))
+			
 	_entity = entity
+	_entity.pos = pos
 
 
 ## Removes an entity from the tile if it has one, otherwise errors.
@@ -25,6 +27,7 @@ func remove_entity() -> void:
 	assert(_entity == null, 
 			"Trying to remove an entity in tile {tile} failed because that tile is empty."
 			.format({"tile": pos}))
+	_entity = null
 
 
 ## Returns true if the tile has an entity on it.
