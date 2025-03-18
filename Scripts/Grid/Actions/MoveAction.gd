@@ -1,0 +1,3 @@
+extends CharacterAction
+
+class_name MoveAction
