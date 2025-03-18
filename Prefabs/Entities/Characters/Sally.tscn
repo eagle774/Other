@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://lsqgxgw3xwxe"]
+
+[ext_resource type="Script" uid="uid://box7ww7oyh5f4" path="res://Scripts/Grid/Units/Sally.gd" id="1_hqlbp"]
+[ext_resource type="Texture2D" uid="uid://byf3cyxlnuc2t" path="res://Resources/Sprites/Sally.png" id="2_10mgy"]
+
+[node name="Sally" type="Node2D"]
+script = ExtResource("1_hqlbp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_10mgy")
