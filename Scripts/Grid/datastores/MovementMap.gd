@@ -2,7 +2,7 @@ extends Resource
 class_name MovementMap
 ## Creates a map of walkable tiles around a character 
 
-var grid: Grid = InstanceHandler.active_grid
+var grid: GameBoard = InstanceHandler.active_grid
 # A Vector2i -> int dictionary that contains the distance to a tile if it is less than max_dist
 # and otherwise INF or is empty.
 var dist: Dictionary[Vector2i, int] = {}

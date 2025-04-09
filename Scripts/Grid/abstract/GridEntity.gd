@@ -2,8 +2,6 @@ extends Node2D
 
 class_name GridEntity;
 
-var y: Grid;
-
 var hp := 5;
 var maxHP := hp;
 var pos: Vector2i;

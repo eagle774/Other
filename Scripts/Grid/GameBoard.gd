@@ -1,11 +1,7 @@
 extends Node2D
-## GRID
-## The description of the script, what it can do,
-## and any further detail.
-##
-## Class to handle multiple entitys moving and interacting within a grid.
+## Board to manage tiles, entities, and characters within it.
 
-class_name Grid;
+class_name GameBoard
 
 #region Variable declarations
 
