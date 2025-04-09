@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgodurprnoww7"]
+
+[ext_resource type="Script" uid="uid://jbsrgdgtwcy4" path="res://Scripts/Grid/Units/Timmy.gd" id="1_b4pf0"]
+[ext_resource type="Texture2D" uid="uid://ne2dhqs1765t" path="res://Resources/Sprites/Timmy.png" id="2_awvvi"]
+
+[node name="Timmy" type="Node2D"]
+script = ExtResource("1_b4pf0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_awvvi")

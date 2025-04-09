@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx0tnvuxtas4g"]
+
+[ext_resource type="Script" uid="uid://bcywtdrarpcw4" path="res://Scripts/Grid/abstract/Tile.gd" id="1_vutlv"]
+[ext_resource type="Script" uid="uid://6wfn8ws8bpvf" path="res://Scripts/General/Clickable.gd" id="2_djofr"]
+
+[sub_resource type="Gradient" id="Gradient_8tvog"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5w1gw"]
+gradient = SubResource("Gradient_8tvog")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgr04"]
+size = Vector2(64, 64)
+
+[node name="Tile" type="Node2D"]
+script = ExtResource("1_vutlv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+texture = SubResource("GradientTexture2D_5w1gw")
+
+[node name="ClickableHitbox" type="Area2D" parent="."]
+script = ExtResource("2_djofr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableHitbox"]
+shape = SubResource("RectangleShape2D_pgr04")
+
+[connection signal="clicked" from="ClickableHitbox" to="." method="_on_clickable_hitbox_clicked"]
