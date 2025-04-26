@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b12y2v5cmfe0i"]
+
+[ext_resource type="Script" uid="uid://dovg71nkovhrm" path="res://Scripts/Grid/visuals/EffectClusterDisplay.gd" id="1_668h8"]
+[ext_resource type="PackedScene" uid="uid://4rb073qvwuec" path="res://Prefabs/Gui/EffectDisplay.tscn" id="1_jtp60"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_668h8")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_right = 391.0
+offset_bottom = 147.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EffectDisplay" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_jtp60")]
+layout_mode = 2
+
+[node name="EffectDisplay2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_jtp60")]
+layout_mode = 2
